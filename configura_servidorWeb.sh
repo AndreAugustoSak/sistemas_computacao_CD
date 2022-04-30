@@ -18,17 +18,13 @@ wget https://gist.github.com/nunomazer/873219/archive/690e1f604dc8ead2583589e1ae
 
 unzip *.zip
 
-cd 873219-690e1f604dc8ead2583589e1aee6f8a42040a035/
+sudo cp 873219-690e1f604dc8ead2583589e1aee6f8a42040a035/cv-resumido.html /var/www/html/
 
-sudo cp cv-resumido.html style.css /var/www/html/
+sudo cp 873219-690e1f604dc8ead2583589e1aee6f8a42040a035/style.css /var/www/html/
 
-cd
+sudo rm /var/www/html/index.html
 
-cd /var/www/html/
-
-sudo rm html.index
-
-sudo mv cv.resumido.html index.html
+sudo mv /var/www/html/cv-resumido.html /var/www/html/index.html
 
 sudo a2ensite 000-default.conf
 
